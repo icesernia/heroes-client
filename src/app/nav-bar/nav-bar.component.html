@@ -1,3 +1,22 @@
-<p>
-  nav-bar works!
-</p>
+<div class="container white">
+  <div class="row center">
+    <div class="col s4">
+      <a
+        routerLink="/"
+        routerLinkActive="active-menu"
+        [routerLinkActiveOptions]="{exact: true}">Heroes</a>
+    </div>
+    <div class="col s4">
+      <a
+        routerLink="/hero/1"
+        routerLinkActive="active-menu"
+        [routerLinkActiveOptions]="{exact: true}">Hero</a>
+    </div>
+    <div class="col s4">
+      <a
+        routerLink="/login"
+        routerLinkActive="active-menu"
+        [routerLinkActiveOptions]="{exact: true}">Login</a>
+    </div>
+  </div>
+</div>
