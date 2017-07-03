@@ -9,6 +9,8 @@ import { HeroInfoComponent } from './hero-info/hero-info.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HeroComponent } from './select-hero/hero/hero.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SeleceHeroPipe } from './select-hero/selece-hero.pipe';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     SelectHeroComponent,
     HeroInfoComponent,
     NavBarComponent,
-    HeroComponent
+    HeroComponent,
+    SeleceHeroPipe
   ],
   imports: [
     BrowserModule,
