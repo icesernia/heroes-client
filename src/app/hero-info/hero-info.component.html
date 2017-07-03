@@ -1,3 +1,97 @@
-<p>
-  hero-info works!
-</p>
+<div class="container white">
+  <div class="row">
+    <div class="hero-wrapper col s12 grey-text text-darken-3" *ngIf="loadingHero"><h5>Loading ...</h5></div>
+    <div class="hero-wrapper col s12" *ngIf="!loadingHero">
+      <div class="section red-text text-darken-3" style="padding-bottom:10px;">
+        <div class="row">
+          <div class="col s12">
+            <div class="left">
+              <img [src]="hero.pic" class="header-img">
+              <h5 class="header-hero">{{ hero.name }}
+                <br><small class="grey-text text-darken-2">{{ hero.team | uppercase }} | {{ hero.type | uppercase }} | {{ hero.primary_attr | uppercase }}</small>
+              </h5>
+            </div>
+            <div class="right">
+              <span class="header-hero header-stat">
+                star graph
+              </span>
+            </div>
+            <div class="right">
+              <span class="header-hero header-stat">
+                54.34%<br>
+                <small class="grey-text text-darken-2">WIN RATE</small>
+              </span>
+            </div>
+            <div class="right">
+              <span class="header-hero header-stat">
+                84th<br>
+                <small class="grey-text text-darken-2">POPULARITY</small>
+              </span>
+            </div>
+          </div>
+          <div class="col s12 center">
+            <a
+              class="waves-effect waves-teal btn-flat"
+              routerLink="details"
+              routerLinkActive="red darken-3 white-text"
+              [routerLinkActiveOptions]="{exact: true}">details</a>
+            <a
+              class="waves-effect waves-teal btn-flat"
+              routerLink="statistics"
+              routerLinkActive="red darken-3 white-text"
+              [routerLinkActiveOptions]="{exact: true}">Statistics</a>
+          </div>
+        </div>
+        <div class="divider"></div>
+      </div>
+      <div class="section" style="padding-top:0px;">
+        <router-outlet></router-outlet>
+        <div class="divider"></div>
+      </div>
+      <div class="section" style="padding-top:0px;padding-bottom:0px;">
+        <div class="row" *ngFor="let spell of hero.spells | keys">
+          <div class="col s12 m12 l4">
+            <img [src]="spell.value.pic" style="width:75px;padding-right:10px;">
+            <span class="header-hero red-text text-darken-3">
+              <b>{{ spell.value.name }}</b> <br>
+              <small>
+                {{ spell.value.damage_type? spell.value.damage_type: 'None' }}<br>
+                {{ spell.value.targets }}
+              </small>
+            </span>
+          </div>
+          <div class="col s12 m12 l8 grey-text text-darken-3">
+            <div class="row">
+              <div class="col s12 m2"><b>Description</b></div>
+              <div class="col s12 m10">{{ spell.value.description }}</div>
+            </div>
+            <div class="row">
+              <div class="col s12 m2"><b>Damage</b></div>
+              <div class="col s12 m10">
+                {{ spell.value.damage? spell.value.damage.split(' ').join('/'):'-' }}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m2"><b>Mana Cost</b></div>
+              <div class="col s12 m10">
+                {{ spell.value.mana_cost? spell.value.mana_cost.split(' ').join('/'):'-' }}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m2"><b>Cooldown</b></div>
+              <div class="col s12 m10">
+                {{ spell.value.cooldown? spell.value.cooldown.split(' ').join('/'):'-' }} s
+              </div>
+            </div>
+            <div class="row grey-text" *ngFor="let prop of spell.value.properties | keys">
+              <div class="col s12 m3" style="font-size: 12px;"><b>{{ prop.value.name? prop.value.name: prop.key.split('_').join(' ') | uppercase }}</b></div>
+              <div class="col s12 m9" >{{ prop.value.value.split(' ').join('/') }}</div>
+            </div>
+            <div class="divider"></div>
+          </div>
+        </div>
+        <div class="divider"></div>
+      </div>
+    </div>
+  </div>
+</div>
