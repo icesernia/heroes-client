@@ -9,6 +9,7 @@ import { HeroInfoComponent } from './hero-info/hero-info.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HeroComponent } from './select-hero/hero/hero.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeroInfoService } from './hero-info/hero-info.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [],
+  providers: [HeroInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
