@@ -9,6 +9,7 @@ import { HeroInfoComponent } from './hero-info/hero-info.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HeroComponent } from './select-hero/hero/hero.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RegisterComponent } from './login/register/register.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     SelectHeroComponent,
     HeroInfoComponent,
     NavBarComponent,
-    HeroComponent
+    HeroComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
