@@ -1,0 +1,21 @@
+.header-img {
+  width:140px;
+  padding-right:20px;
+}
+
+.header-hero {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.header-stat {
+  padding-left: 25px;
+}
+
+.hero-wrapper {
+  padding: 10px 30px 10px 30px;
+}
+
+.capitalize {
+   text-transform: capitalize;
+}

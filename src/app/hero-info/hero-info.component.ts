@@ -11,20 +11,34 @@ import { HeroInfoService } from './hero-info.service';
 })
 export class HeroInfoComponent implements OnInit {
   id: number;
+  hero: any;
+  loadingHero: boolean;
   constructor(private route: ActivatedRoute, private heroInfoService: HeroInfoService) { }
 
   ngOnInit() {
+    this.loadingHero = true;
     this.route.params
       .subscribe(
         (params: Params) => {
           this.id = params['id'];
           this.heroInfoService.getHeroByID(this.id)
             .subscribe(
-              (resp) => console.log(resp),
-              (error) => console.log(error)
+              (resp) => {
+                this.loadingHero = false;
+                this.hero = resp;
+                console.log(this.hero);
+              },
+              (error) => {
+                this.loadingHero = false;
+                console.log(error);
+              }
             );
         }
       )
+  }
+
+  printProp(obj) {
+    console.log(obj);
   }
 
 }

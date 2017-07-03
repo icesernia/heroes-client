@@ -10,6 +10,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HeroComponent } from './select-hero/hero/hero.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeroInfoService } from './hero-info/hero-info.service';
+import { KeysPipe } from './keypipes.pipe';
+import { HeroDetailsComponent } from './hero-info/hero-details/hero-details.component';
+import { HeroStatisticsComponent } from './hero-info/hero-statistics/hero-statistics.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { HeroInfoService } from './hero-info/hero-info.service';
     SelectHeroComponent,
     HeroInfoComponent,
     NavBarComponent,
-    HeroComponent
+    HeroComponent,
+    KeysPipe,
+    HeroDetailsComponent,
+    HeroStatisticsComponent
   ],
   imports: [
     BrowserModule,
