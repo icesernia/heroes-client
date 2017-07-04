@@ -80,7 +80,7 @@
             <div class="row">
               <div class="col s12 m2"><b>Cooldown</b></div>
               <div class="col s12 m10">
-                {{ spell.value.cooldown? spell.value.cooldown.split(' ').join('/'):'-' }} s
+                {{ spell.value.cooldown? spell.value.cooldown.split(' ').join('/') + ' s':'-' }}
               </div>
             </div>
             <div class="row grey-text" *ngFor="let prop of spell.value.properties | keys">
