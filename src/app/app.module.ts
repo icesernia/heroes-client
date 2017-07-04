@@ -13,6 +13,8 @@ import { HeroInfoService } from './hero-info/hero-info.service';
 import { KeysPipe } from './keypipes.pipe';
 import { HeroDetailsComponent } from './hero-info/hero-details/hero-details.component';
 import { HeroStatisticsComponent } from './hero-info/hero-statistics/hero-statistics.component';
+import { SeleceHeroPipe } from './select-hero/selece-hero.pipe';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { HeroStatisticsComponent } from './hero-info/hero-statistics/hero-statis
     KeysPipe,
     HeroDetailsComponent,
     HeroStatisticsComponent
+    SeleceHeroPipe
   ],
   imports: [
     BrowserModule,
