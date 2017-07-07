@@ -1,20 +1,32 @@
 <div class="blue-grey darken-4 padding-select">
 <div class="row">
+    <div class="input-field col s12">
+          <input id="password" type="text" class="validate">
+          <label for="password">Password</label>
+        </div>
   <div class="col s12 center-align" ><h3 class="white-text">All Heroes</h3></div>
   <div class="col s12"> <h5 class="red-text"> STRENGTH </h5> </div>
   <!--<app-hero *ngFor="let data to heroesData"></app-hero>-->
-  <app-hero></app-hero>
-   <div class="col s12"> <h5 class="light-green-text text-accent-4"> AGILITY </h5> </div>
-  <app-hero></app-hero>
-  <app-hero></app-hero>
-   <div class="col s12"> <h5 class="blue-text text-accent-2"> INTELLIGENCE </h5> </div>
-  <app-hero></app-hero>
-  <app-hero></app-hero>
-<h1>Select Heros</h1>
-<div *ngFor="let hero of heroesData">
-<h6>
-  {{ hero | json  }}
-</h6>
-</div>
-
+  <div class=row>
+    <div class="col s12 m6 l6">
+    <app-hero  *ngFor="let hero of heroesData | keys" [hero]="divideSide('radiant','str',hero)"></app-hero>
+    </div>
+    <div class="col s12 m6 l6">
+    <app-hero  *ngFor="let hero of heroesData | keys" [hero]="divideSide('dire','str',hero)"></app-hero>
+    </div>
+     <div class="col s12"> <h5 class="light-green-text text-accent-4"> AGILITY </h5> </div>
+     <div class="col s12 m6 l6">
+    <app-hero  *ngFor="let hero of heroesData | keys" [hero]="divideSide('radiant','agi',hero)"></app-hero>
+    </div>
+    <div class="col s12 m6 l6">
+    <app-hero  *ngFor="let hero of heroesData | keys" [hero]="divideSide('dire','agi',hero)"></app-hero>
+    </div>
+       <div class="col s12"> <h5 class="blue-text text-accent-2"> INTELLIGENCE </h5> </div>
+     <div class="col s12 m6 l6">
+    <app-hero  *ngFor="let hero of heroesData | keys" [hero]="divideSide('radiant','int',hero)"></app-hero>
+    </div>
+    <div class="col s12 m6 l6">
+    <app-hero  *ngFor="let hero of heroesData | keys" [hero]="divideSide('dire','int',hero)"></app-hero>
+    </div>
+   </div>
 </div>

@@ -26,7 +26,7 @@ import { SeleceHeroPipe } from './select-hero/selece-hero.pipe';
     HeroComponent,
     KeysPipe,
     HeroDetailsComponent,
-    HeroStatisticsComponent
+    HeroStatisticsComponent,
     SeleceHeroPipe
   ],
   imports: [

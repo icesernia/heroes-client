@@ -5,8 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SeleceHeroPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(value: any,test: any ) {
     return null;
   }
+
+
 
 }

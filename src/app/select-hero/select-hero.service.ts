@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { environment } from "environments/environment";
+import { environment } from 'environments/environment';
 import { Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 @Injectable()
 export class SelectHeroService {
 
-  constructor(private http:Http) { }
+  constructor(private http: Http) { }
 
 
 getAllHeroes() {
@@ -15,7 +15,7 @@ getAllHeroes() {
         return data;
       });
   }
-  
+
 }
 
 
