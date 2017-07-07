@@ -14,6 +14,7 @@ import { KeysPipe } from './keypipes.pipe';
 import { HeroDetailsComponent } from './hero-info/hero-details/hero-details.component';
 import { HeroStatisticsComponent } from './hero-info/hero-statistics/hero-statistics.component';
 import { SeleceHeroPipe } from './select-hero/selece-hero.pipe';
+import { SearchPageComponent } from './select-hero/search-page/search-page.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SeleceHeroPipe } from './select-hero/selece-hero.pipe';
     KeysPipe,
     HeroDetailsComponent,
     HeroStatisticsComponent,
-    SeleceHeroPipe
+    SeleceHeroPipe,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,
