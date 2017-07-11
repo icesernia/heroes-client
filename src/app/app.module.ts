@@ -13,7 +13,6 @@ import { HeroInfoService } from './hero-info/hero-info.service';
 import { KeysPipe } from './keypipes.pipe';
 import { HeroDetailsComponent } from './hero-info/hero-details/hero-details.component';
 import { HeroStatisticsComponent } from './hero-info/hero-statistics/hero-statistics.component';
-import { SeleceHeroPipe } from './select-hero/selece-hero.pipe';
 import { SearchPageComponent } from './select-hero/search-page/search-page.component';
 import { RegisterComponent } from './login/register/register.component';
 
@@ -29,9 +28,7 @@ import { RegisterComponent } from './login/register/register.component';
     KeysPipe,
     HeroDetailsComponent,
     HeroStatisticsComponent,
-    SeleceHeroPipe,
-    SearchPageComponent
-    HeroComponent,
+    SearchPageComponent,
     RegisterComponent
   ],
   imports: [
