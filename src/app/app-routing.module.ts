@@ -1,9 +1,10 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { SelectHeroComponent } from './select-hero/select-hero.component';
 import { HeroInfoComponent } from './hero-info/hero-info.component';
+import { RegisterComponent } from './login/register/register.component';
 import { HeroDetailsComponent } from './hero-info/hero-details/hero-details.component';
 import { HeroStatisticsComponent } from './hero-info/hero-statistics/hero-statistics.component';
 
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: '' }
+  { path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({

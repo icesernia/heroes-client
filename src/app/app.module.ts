@@ -15,6 +15,7 @@ import { HeroDetailsComponent } from './hero-info/hero-details/hero-details.comp
 import { HeroStatisticsComponent } from './hero-info/hero-statistics/hero-statistics.component';
 import { SeleceHeroPipe } from './select-hero/selece-hero.pipe';
 import { SearchPageComponent } from './select-hero/search-page/search-page.component';
+import { RegisterComponent } from './login/register/register.component';
 
 
 @NgModule({
@@ -30,6 +31,8 @@ import { SearchPageComponent } from './select-hero/search-page/search-page.compo
     HeroStatisticsComponent,
     SeleceHeroPipe,
     SearchPageComponent
+    HeroComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
